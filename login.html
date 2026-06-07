@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Login - Ecomm</title>
+	<style>
+		body { font-family: Arial, sans-serif; background:#f4f6f8; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+		.card { background:#fff; padding:24px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); width:320px; }
+		h1 { font-size:20px; margin:0 0 12px; }
+		label { display:block; font-size:13px; margin-top:8px; }
+		input[type="text"], input[type="password"] { width:100%; padding:10px 8px; margin-top:6px; border:1px solid #dcdfe6; border-radius:4px; box-sizing:border-box; }
+		button { width:100%; margin-top:16px; padding:10px; background:#0078d4; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+		.actions { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
+		.small { font-size:12px; color:#555; }
+	</style>
+</head>
+<body>
+	<div class="card">
+		<h1>Sign in to Ecomm</h1>
+		<form id="loginForm" action="#" method="post">
+			<label for="email">Email</label>
+			<input id="email" name="email" type="text" autocomplete="username" required />
+
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" autocomplete="current-password" required />
+
+			<div class="actions">
+				<label class="small"><input type="checkbox" name="remember" /> Remember me</label>
+				<a class="small" href="#">Forgot?</a>
+			</div>
+
+			<button type="submit">Sign in</button>
+		</form>
+	</div>
+
+	<script>
+		document.getElementById('loginForm').addEventListener('submit', function(e){
+			e.preventDefault();
+			// Basic client-side handling: log values (replace with real auth)
+			const email = document.getElementById('email').value;
+			const password = document.getElementById('password').value;
+			console.log('Login attempt', { email, password });
+			alert('Login submitted (demo)');
+		});
+	</script>
+</body>
+</html>
